@@ -5,7 +5,7 @@ const WeatherModel = require('../models/weatherModel')
 // Get all weather
 router.get('/', async (req, res) => {
     try{
-        const weather = await WeatherModel.find()
+        const weather = await WeatherModel.findOne().sort({createdDate: -1}).limit(1)
         res.json(weather)
     }catch(err){
         res.status(500).json({ message: err.message })
