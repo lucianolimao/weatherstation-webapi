@@ -49,10 +49,8 @@ const weatherModelSchema = new mongoose.Schema({
             },
             "unit": {
               "type": "String"
-            }
-          },
-          "direction": {
-            "value": {
+            },
+            "direction": {
               "type": "String"
             }
           }

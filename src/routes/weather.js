@@ -41,11 +41,9 @@ router.post('/', async (req, res) => {
             },
             wind: {
                 value: req.body.weather.wind.value,
-                unit: req.body.weather.wind.unit
-            },
-            direction: {
-                value: req.body.weather.direction.value
-            }
+                unit: req.body.weather.wind.unit,
+                direction: req.body.weather.wind.direction
+            }            
         }
     })
 
